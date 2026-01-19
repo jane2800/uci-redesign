@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Section Navigation Prototype</title>
+    <title>UCI</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -26,31 +26,35 @@
                     </svg>
                 </div>
                 <div class="location-container">
-                    <div class="h2">Berlin - East Side Gallery | Luxe</div>
-                <button class="icon-button location-icon"> 
-                    <i class="bi bi-geo-alt-fill icon"></i>
-                </button>
-                </div>
-            </div>
-
-            <div class="header">
-                <div class="header-title">
-                    <h1>Programm im UCI Kino</h1>
+                    <div class="location-text">Berlin - East Side Gallery | Luxe</div>
                     <div class="popup-wrapper">
-                        <button class="icon-button ov-popup"
+                        <button class=" location-icon ov-popup"
                                 aria-haspopup="dialog"
                                 aria-expanded="false"
                                 onclick="togglePopup(this)">
-                            <i class="bi bi-info-circle icon"></i>
+                            <i class="bi bi-geo-alt-fill icon"></i>
                         </button>
-                        <div class="popup" role="dialog">
-                            <div>OV: Filmvorstellung in Originalsprache</div>
-                            <div>OmU: Filmvorstellung in Originalsprache mit Untertiteln</div>
-                            <div>OmeU: in Originalsprache mit englischen Untertiteln</div>
+                        <div class="popup location-popup" role="dialog">
+                            <div class="location-item" onclick="selectLocation(this)">UCI Berlin - East Side Gallery | Luxe</div>
+                            <div class="location-item" onclick="selectLocation(this)">UCI Berlin - Spandau | Luxe</div>
+                            <div class="location-item" onclick="selectLocation(this)">UCI Berlin - Colosseum | Luxe</div>
                         </div>
                     </div>
                 </div>
-
+            </div>
+            
+            <div class="header">
+                <div class="header-title">
+                    <h1>Programm im UCI Kino</h1>
+                    <button class="icon-button ov-popup" onclick="toggleDropdown(this)">
+                        <i class="bi bi-info-circle icon"></i>
+                    </button>
+                </div>
+                <div class="legend-expanded">
+                    <div class="legend-text"><strong>OV:</strong> Filmvorstellung in Originalsprache</div>
+                    <div class="legend-text"><strong>OmU:</strong> Filmvorstellung in Originalsprache mit Untertiteln</div>
+                    <div class="legend-text"><strong>OmeU:</strong> in Originalsprache mit englischen Untertiteln</div>
+                </div>
             </div>
             <div class="legend">
                 <div class="legend-title">Legende:</div>
@@ -82,7 +86,7 @@
                                     <div class="time-ov">OV</div>
                             </div>
                         </div>
-                        <button class="icon-button"
+                        <button class="down-button"
                                     onclick="navigateTo('movie-overview-screen')"
                                     aria-label="Show movie details">
                             <i class="bi bi-caret-down-fill icon"></i>
@@ -97,7 +101,7 @@
                             <div class="time-button">16:30 
                                 <span class="time-ov">OV</span></div>
                         </div>
-                        <button class="icon-button "
+                        <button class="down-button "
                                 onclick="navigateTo('movie-overview-screen')"
                                 aria-label="Show movie details">
                             <i class="bi bi-caret-down-fill icon"></i>
@@ -111,7 +115,7 @@
                         <div class="time-label">Heute</div>
                         <div class="time-button">18:45</div>
                     </div>
-                    <button class="icon-button "
+                    <button class="down-button "
                                 onclick="navigateTo('movie-overview-screen')"
                                 aria-label="Show movie details">
                         <i class="bi bi-caret-down-fill icon"></i>
@@ -125,7 +129,7 @@
                         <div class="time-label">Heute</div>
                         <div class="time-button">20:15</div>
                     </div>
-                    <button class="icon-button "
+                    <button class="down-button "
                                 onclick="navigateTo('movie-overview-screen')"
                                 aria-label="Show movie details">
                         <i class="bi bi-caret-down-fill icon"></i>
@@ -247,10 +251,20 @@
                         <i class="bi bi-arrow-left icon"></i>
                     </div>
                     <div class="location-container">
-                        <div class="h2">Berlin - East Side Gallery | Luxe</div>
-                        <button class="icon-button location-icon"> 
-                        <i class="bi bi-geo-alt-fill icon"></i>
-                        </button>
+                        <div class="location-text">Berlin - East Side Gallery | Luxe</div>
+                        <div class="popup-wrapper">
+                            <button class=" location-icon ov-popup"
+                                    aria-haspopup="dialog"
+                                    aria-expanded="false"
+                                    onclick="togglePopup(this)">
+                                <i class="bi bi-geo-alt-fill icon"></i>
+                            </button>
+                            <div class="popup location-popup" role="dialog">
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - East Side Gallery | Luxe</div>
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - Spandau | Luxe</div>
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - Colosseum | Luxe</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -258,20 +272,17 @@
                     <div class="movie-poster">Movie Poster</div>
                     <div class="movie-details">
                         <div class="info-header">
-                            <h2 class="info-movie-title">Movie Title </h2>
-                            <div class="popup-wrapper">
-                                <button class="icon-button ov-popup"
-                                        aria-haspopup="dialog"
-                                        aria-expanded="false"
-                                        onclick="togglePopup(this)">
+                            <div class="info-header-top">
+                                <h2 class="info-movie-title">Movie Title</h2>
+                                <button class="icon-button ov-popup" onclick="toggleDropdown(this)">
                                     <i class="bi bi-info-circle icon"></i>
                                 </button>
+                            </div>
 
-                                <div class="popup" role="dialog">
-                                    <div>OV: Filmvorstellung in Originalsprache</div>
-                                    <div>OmU: Filmvorstellung in Originalsprache mit Untertiteln</div>
-                                    <div>OmeU: in Originalsprache mit englischen Untertiteln</div>
-                                </div>
+                            <div class="legend-expanded">
+                                <div class="legend-text"><strong>OV:</strong> Filmvorstellung in Originalsprache</div>
+                                <div class="legend-text"><strong>OmU:</strong> Filmvorstellung in Originalsprache mit Untertiteln</div>
+                                <div class="legend-text"><strong>OmeU:</strong> in Originalsprache mit englischen Untertiteln</div>
                             </div>
                         </div>
                         <div class="info-grid">
@@ -283,7 +294,7 @@
                     </div> 
                     <div class="timing-grid">
                         <div class="movie-title">Sa. 17 Jan</div>
-                        <div class="movie-time-button" onclick="navigateTo('ticket-selection-screen')">
+                        <div class="movie-time-button" onclick="navigateTo('login-screen')">
                             <div class="time-button">16:30 <span class="time-ov">OV</span></div>
                         </div>
                         <div class="movie-time-button" onclick="navigateTo('login-screen')">
@@ -339,15 +350,107 @@
                         <i class="bi bi-arrow-left icon"></i>
                     </div>
                     <div class="location-container">
-                        <div class="h2">Berlin - East Side Gallery | Luxe</div>
-                        <button class="icon-button location-icon">
-                            <i class="bi bi-geo-alt-fill icon"></i>
-                        </button>
+                        <div class="location-text">Berlin - East Side Gallery | Luxe</div>
+                        <div class="popup-wrapper">
+                            <button class=" location-icon ov-popup"
+                                    aria-haspopup="dialog"
+                                    aria-expanded="false"
+                                    onclick="togglePopup(this)">
+                                <i class="bi bi-geo-alt-fill icon"></i>
+                            </button>
+                            <div class="popup location-popup" role="dialog">
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - East Side Gallery | Luxe</div>
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - Spandau | Luxe</div>
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - Colosseum | Luxe</div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="login-screen">
+                    <h1 class="login-title">LOGIN</h1>
+
+                    <p class="login-text">
+                        Bitte loggen Sie sich mit Ihren "Mein UCI"-Daten ein,
+                        um Tickets zu buchen.
+                    </p>
+
+                    <button class="btn-primary">ZUM LOGIN</button>
+
+                    <div class="login-divider">Neu bei UCI?</div>
+
+                    <button class="btn-secondary">REGISTRIERUNG</button>
+                    <button class="btn-secondary" onclick="navigateTo('guest-login-screen')">
+                        ALS GAST BUCHEN
+                    </button>
                 </div>
             </div>
         </div>
     </div>
+
+    <div id="guest-login-screen" class="screen">
+        <div class="phone-frame">
+            <div class="app-content">
+                <div class="status-bar">
+                    <div class="status-left">
+                        <span>14:55</span>
+                    </div>
+                    <div class="status-right">
+                        <span class="battery">50</span>
+                    </div>
+                </div>
+                <div class="top-nav">
+                    <div class="back-button" onclick="navigateTo('movie-overview-screen')">
+                        <i class="bi bi-arrow-left icon"></i>
+                    </div>
+                    <div class="location-container">
+                        <div class="location-text">Berlin - East Side Gallery | Luxe</div>
+                        <div class="popup-wrapper">
+                            <button class=" location-icon ov-popup"
+                                    aria-haspopup="dialog"
+                                    aria-expanded="false"
+                                    onclick="togglePopup(this)">
+                                <i class="bi bi-geo-alt-fill icon"></i>
+                            </button>
+                            <div class="popup location-popup" role="dialog">
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - East Side Gallery | Luxe</div>
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - Spandau | Luxe</div>
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - Colosseum | Luxe</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="guest-login">
+                    <h1 class="guest-title">ALS GAST BUCHEN</h1>
+
+                    <p class="guest-text">
+                    Bitte geben Sie Ihre E-Mail-Adresse ein,
+                    um Tickets zu buchen.
+                    </p>
+
+                    <input
+                    type="email"
+                    class="guest-input"
+                    placeholder="E-Mail-Adresse"
+                    />
+
+                    <p class="guest-info">
+                    Als Gast ist die Einlösung von Gutscheinen/Geschenkkarten
+                    nicht möglich. Bitte nutzen Sie hierzu Ihren kostenlosen
+                    MeinUCI-Account.
+                    </p>
+
+                    <p class="guest-link">
+                    MeinUCI Login / Registrierung:
+                    </p>
+
+                    <button class="btn-secondary" onclick="navigateTo('ticket-selection-screen')">
+                    ANMELDEN
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Ticket Selection Screen -->
     <div id="ticket-selection-screen" class="screen">
@@ -366,10 +469,20 @@
                         <i class="bi bi-arrow-left icon"></i>
                     </div>
                     <div class="location-container">
-                        <div class="h2">Berlin - East Side Gallery | Luxe</div>
-                        <button class="icon-button location-icon"> 
-                            <i class="bi bi-geo-alt-fill icon"></i>
-                        </button>
+                        <div class="location-text">Berlin - East Side Gallery | Luxe</div>
+                        <div class="popup-wrapper">
+                            <button class=" location-icon ov-popup"
+                                    aria-haspopup="dialog"
+                                    aria-expanded="false"
+                                    onclick="togglePopup(this)">
+                                <i class="bi bi-geo-alt-fill icon"></i>
+                            </button>
+                            <div class="popup location-popup" role="dialog">
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - East Side Gallery | Luxe</div>
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - Spandau | Luxe</div>
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - Colosseum | Luxe</div>
+                            </div>
+                        </div>
                     </div>
                 </div> 
                 <div class="header-container">
@@ -456,10 +569,20 @@
                         <i class="bi bi-arrow-left icon"></i>
                     </div>
                     <div class="location-container">
-                        <div class="h2">Berlin - East Side Gallery | Luxe</div>
-                        <button class="icon-button"> 
-                            <i class="bi bi-geo-alt-fill icon"></i>
-                        </button>
+                        <div class="location-text">Berlin - East Side Gallery | Luxe</div>
+                        <div class="popup-wrapper">
+                            <button class=" location-icon ov-popup"
+                                    aria-haspopup="dialog"
+                                    aria-expanded="false"
+                                    onclick="togglePopup(this)">
+                                <i class="bi bi-geo-alt-fill icon"></i>
+                            </button>
+                            <div class="popup location-popup" role="dialog">
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - East Side Gallery | Luxe</div>
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - Spandau | Luxe</div>
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - Colosseum | Luxe</div>
+                            </div>
+                        </div>
                     </div>
                 </div> 
                 <div class="header-container">
@@ -494,10 +617,20 @@
                         <i class="bi bi-arrow-left icon"></i>
                     </div>
                     <div class="location-container">
-                        <div class="h2">Berlin - East Side Gallery | Luxe</div>
-                        <button class="icon-button location-icon"> 
-                            <i class="bi bi-geo-alt-fill icon"></i>
-                        </button>
+                    <div class="location-text">Berlin - East Side Gallery | Luxe</div>
+                        <div class="popup-wrapper">
+                            <button class=" location-icon ov-popup"
+                                    aria-haspopup="dialog"
+                                    aria-expanded="false"
+                                    onclick="togglePopup(this)">
+                                <i class="bi bi-geo-alt-fill icon"></i>
+                            </button>
+                            <div class="popup location-popup" role="dialog">
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - East Side Gallery | Luxe</div>
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - Spandau | Luxe</div>
+                                <div class="location-item" onclick="selectLocation(this)">UCI Berlin - Colosseum | Luxe</div>
+                            </div>
+                        </div>
                     </div>
                 </div> 
             </div>

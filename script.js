@@ -57,3 +57,10 @@ function togglePopup(button) {
       });
   });
 }
+
+function toggleDropdown(button) {
+  console.log("Toggling dropdown");
+  const dropdown = button.closest('.header').querySelector('.legend-expanded');
+  dropdown.classList.toggle('open');
+  button.classList.toggle('open');
+}
