@@ -64,3 +64,10 @@ function toggleDropdown(button) {
   dropdown.classList.toggle('open');
   button.classList.toggle('open');
 }
+
+function toggleDropdownInfo(button) {
+  console.log("Toggling dropdown");
+  const dropdown = button.closest('.info-header').querySelector('.legend-expanded');
+  dropdown.classList.toggle('open');
+  button.classList.toggle('open');
+}

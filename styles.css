@@ -552,6 +552,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      overflow: visible;
     }
 
     .info-movie-title {
@@ -592,7 +593,7 @@
     }
 
     .header-container{
-      background-color: #0d255f;
+      background-color: #010b22;
       display: grid;
       grid-template-columns: max-content 1fr;
       align-items: center;
@@ -824,4 +825,12 @@
     .guest-link {
       font-size: 16px;
       margin-bottom: 20px;
+    }
+
+    .seating-image img {
+      width: 95%;
+      height: 95%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
     }

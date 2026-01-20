@@ -1,0 +1,8 @@
+const string = {
+    home: {
+        welcome: "Welcome to our application!",
+        description: "This is the home page where you can find the latest updates."
+    }
+};
+
+export default string;
