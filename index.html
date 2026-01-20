@@ -504,6 +504,26 @@
                         </div>
                     </div>
                 </div> 
+                <div class="progress-card">
+                    <div class="progress-step active">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Tickets</span>
+                    </div>
+
+                    <div class="progress-line"></div>
+
+                    <div class="progress-step ">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Seats</span>
+                    </div>
+
+                    <div class="progress-line"></div>
+
+                    <div class="progress-step ">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Payment</span>
+                    </div>
+                </div>
                 <div class="header-container">
                     <div class="header-poster">Movie Poster</div>
                     <div>
@@ -608,6 +628,26 @@
                         </div>
                     </div>
                 </div> 
+                <div class="progress-card">
+                    <div class="progress-step completed">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Tickets</span>
+                    </div>
+
+                    <div class="progress-line"></div>
+
+                    <div class="progress-step active">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Seats</span>
+                    </div>
+
+                    <div class="progress-line"></div>
+
+                    <div class="progress-step ">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Payment</span>
+                    </div>
+                </div>
                 <div class="header-container">
                     <div class="header-poster">Movie Poster</div>
                     <div>
@@ -632,18 +672,19 @@
             <div class="app-content">
                 <div class="status-bar">
                     <div class="status-left">
-                    <span>14:55</span>
+                        <span>14:55</span>
                     </div>
                     <div class="status-right">
-                    <span class="battery">50</span>
+                        <span class="battery">50</span>
                     </div>
                 </div>
+
                 <div class="top-nav">
                     <div class="back-button" onclick="navigateTo('seat-selection-screen')">
                         <i class="bi bi-arrow-left icon"></i>
                     </div>
                     <div class="location-container">
-                    <div class="location-text">Berlin - East Side Gallery | Luxe</div>
+                        <div class="location-text">Berlin - East Side Gallery | Luxe</div>
                         <div class="popup-wrapper">
                             <button class=" location-icon ov-popup"
                                     aria-haspopup="dialog"
@@ -658,52 +699,120 @@
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-step completed">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Tickets</span>
+                    </div>
+
+                    <div class="progress-line"></div>
+
+                    <div class="progress-step completed">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Seats</span>
+                    </div>
+
+                    <div class="progress-line"></div>
+
+                    <div class="progress-step active">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Payment</span>
+                    </div>
+                </div>
+
                 <div class="header-container">
                     <div class="header-poster">Movie Poster</div>
-                    <div>
+                    <div class="header-info">
                         <div class="header-title">Avatar: Fire And Ash</div>
                         <div class="header-text">13.01.2026 | 15:00</div>
                         <div class="header-text">UCI East Side Gallery | Kino 06</div>
                         <div class="header-text">FSK 12</div>
                     </div>
                 </div>
-                <!-- Payment Title -->
-                <div class="section">
-                    <h2>ZAHLUNGSMITTEL</h2>
-                    <p class="section-subtitle">
-                    Wählen Sie das gewünschte Zahlungsmittel aus.
-                    </p>
-                </div>
 
-                <!-- Booking Completion -->
-                <div class="accordion open">
-                    <div class="accordion-header">
-                        <span>Buchungsabschluss</span>
-                        <i class="bi bi-chevron-up"></i>
-                    </div>
-
-                    <div class="accordion-content">
-                        <p>
-                            Nach diesem Schritt haben Sie keine Möglichkeit mehr Gutscheine
-                            oder die Movie Points Karte einzulösen.
+                <div class="payment-screen">
+                    <div class="payment-section">
+                        <h2>ZAHLUNGSMITTEL</h2>
+                        <p class="section-subtitle">
+                            Wählen Sie das gewünschte Zahlungsmittel aus.
                         </p>
-
-                        <button class="primary-btn">
-                            ABSCHLUSS & ZAHLUNGSMITTEL WÄHLEN
-                        </button>
                     </div>
-                </div>
 
-                <!-- Disabled Section -->
-                <div class="accordion disabled">
-                    <div class="accordion-header">
-                    <span>Buchungsabschluss und Zahlung hinterlegen</span>
-                    <i class="bi bi-chevron-down"></i>
+                    <div class="accordion open" onclick="toggleAccordion(this)" id="first-accordion">
+                        <div class="accordion-header">
+                            <span>Buchungsabschluss</span>
+                            <i class="bi bi-chevron-up"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                <p>
+                                    Nach diesem Schritt haben Sie keine Möglichkeit mehr Gutscheine
+                                    oder die Movie Points Karte einzulösen.
+                                </p>
+                                <button class="primary-btn" onclick="showPaymentOptions(event)">
+                                    Abschluss & Zahlungsmittel wählen
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Bottom Bar -->
+                    <div class="accordion" id="second-accordion" onclick="toggleAccordion(this)">
+                        <div class="accordion-header">
+                            <span>Buchungsabschluss und Zahlung hinterlegen</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                <div class="payment-tabs">
+                                    <button class="payment-tab" onclick="selectPaymentMethod(event, 'paypal')">PAYPAL</button>
+                                    <button class="payment-tab active" onclick="selectPaymentMethod(event, 'card')">KREDITKARTE</button>
+                                </div>
+
+                                <div id="paypal-content" class="payment-content" style="display: none;">
+                                    <p style="margin-top: 16px;">
+                                        Zur Zahlung mit Paypal werden Sie zur Paypal Webseite geleitet. Loggen Sie sich dort in ihr PayPal Profil ein und bestätigen den Zahlungsvorgang. Danach haben Sie die Möglichkeit Ihren Einkauf zu prüfen bevor Sie die Buchung abschließen.
+                                    </p>
+                                    <button class="primary-btn" style="margin-top: 16px;">
+                                        Jetzt PayPal Zahlung hinterlegen
+                                    </button>
+                                </div>
+
+                                <div id="card-content" class="payment-content">
+                                    <p style="margin-top: 16px; margin-bottom: 20px;">
+                                        Bitte die Zahlungsdaten für den Kauf der Kinotickets eintragen.
+                                    </p>
+
+                                    <div class="form-group">
+                                        <label>Kartennummer *</label>
+                                        <input type="text" class="payment-input" placeholder="1234 5678 1234 5678">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Gültig bis *</label>
+                                        <input type="text" class="payment-input" placeholder="MM/YYYY">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Inhabername *</label>
+                                        <input type="text" class="payment-input" placeholder="Max Mustermann">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Kartenprüfnummer *</label>
+                                        <input type="text" class="payment-input" placeholder="123">
+                                    </div>
+
+                                    <p class="required-text">Die mit * markierten Felder sind Pflichtfelder</p>
+
+                                    <button class="primary-btn" style="margin-top: 16px;">
+                                        Jetzt Zahlung mit Kreditkarte hinterlegen
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <div class="bottom-bar">
                     <div class="ticket-info">1 Ticket | 24.40 €</div>
                     <i class="bi bi-chevron-up"></i>

@@ -94,3 +94,24 @@ function handleLogin() {
 }
 
 
+function toggleAccordion(element) {
+            if (element.classList.contains('disabled')) return;
+            element.classList.toggle('open');
+        }
+
+        function togglePopup(button) {
+            const wrapper = button.closest('.popup-wrapper');
+            wrapper.classList.toggle('open');
+            
+            // Close when clicking outside
+            if (wrapper.classList.contains('open')) {
+                setTimeout(() => {
+                    document.addEventListener('click', function closePopup(e) {
+                        if (!wrapper.contains(e.target)) {
+                            wrapper.classList.remove('open');
+                            document.removeEventListener('click', closePopup);
+                        }
+                    });
+                }, 0);
+            }
+        }
