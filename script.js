@@ -71,3 +71,26 @@ function toggleDropdownInfo(button) {
   dropdown.classList.toggle('open');
   button.classList.toggle('open');
 }
+
+function handleLogin() {
+  const emailInput = document.getElementById("email");
+  const error = document.getElementById("email-error");
+
+  const email = emailInput.value.trim();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(email)) {
+    error.style.display = "block";
+    emailInput.classList.add("error");
+    return;
+  }
+
+  // Clear error
+  error.style.display = "none";
+  emailInput.classList.remove("error");
+
+  // Continue flow
+  navigateTo("ticket-selection-screen");
+}
+
+

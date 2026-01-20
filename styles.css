@@ -17,7 +17,7 @@
     .phone-frame {
       width: 375px;
       height: 812px;
-      background:  #0d255f;
+      background:  #001d57;
       border-radius: 40px;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
       overflow: hidden;
@@ -33,7 +33,7 @@
       transform: translateX(-50%);
       width: 150px;
       height: 28px;
-      background: #1a1a1a;
+      background: #000000;
       border-radius: 0 0 20px 20px;
       z-index: 1000;
     }
@@ -45,7 +45,7 @@
     }
 
     .scroll-section {
-      max-height: 500px;    
+      max-height: 800px;    
       overflow-y: auto;
     }
 
@@ -222,7 +222,7 @@
 
     .header {
       padding: 15px 15px 0px 15px;
-      background: #0d255f;
+      background: #001d57;
       color: white;
     }
 
@@ -252,7 +252,7 @@
 
     .tab-menu {
       display: flex;
-      background: #0d255f;
+      background: #001d57;
       padding: 0 ;
       gap: 5px;
       overflow-x: auto;
@@ -277,14 +277,13 @@
     }
 
     .legend {
-      padding: 15px;
-      background: #0d255f;
+      padding-top: 10px;
       color: white;
     }
 
     .legend-title {
-      font-size: 12px;
-      font-weight: 600;
+      font-size: 13px;
+      font-weight: 800;
       margin-bottom: 8px;
     }
 
@@ -292,7 +291,6 @@
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
-      margin-bottom: 12px;
     }
 
     .legend-btn {
@@ -308,13 +306,14 @@
     .screenx { background: #882100; color: white; }
 
     .legend-text {
+      color: white;
       font-size: 13px;
       line-height: 1.5;
     }
 
     .content {
       padding: 10px;
-      background: #0d255f;
+      background: #001d57;
       padding-bottom: 80px;
     }
 
@@ -333,7 +332,7 @@
     }
 
     .movie-card {
-      background: #071536;
+      background: #001745;
       border-radius: 8px;
       overflow: hidden;
       cursor: pointer;
@@ -516,8 +515,8 @@
 
     .info-grid{
       display: grid;
-      width: 100%;
-      margin: 0 auto;
+      width: 95%;
+      margin: 10px auto;
       grid-auto-columns: max-content;
       align-items: center;
       grid-template-columns: max-content 1fr 1fr max-content;
@@ -560,10 +559,11 @@
       font-size: 30px;
       font-weight: 600;
       color: white;
+      padding-top: 10px;
     }
 
     .timing-grid{
-      width: 100%;
+      width: 95%;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 10px;
@@ -572,13 +572,16 @@
       padding-top: 20px;
       padding-bottom: 20px;
       align-items: center;
+      margin: 0 auto;
     }
 
     .more-info-container{
-      background-color: #0d255f;
+      background-color: #001d57;
       display: flex;
       flex-direction: column;
       gap: 5px;
+      width: 95%;
+      padding: 10px;
     }
 
     .more-info-title{
@@ -593,11 +596,12 @@
     }
 
     .header-container{
-      background-color: #010b22;
+      background-color: #001d57;
       display: grid;
       grid-template-columns: max-content 1fr;
       align-items: center;
       gap: 15px;
+      border-bottom:#3e495f 2px solid;
     }
 
     .header-poster{
@@ -625,7 +629,7 @@
     }
 
     .ticket-title{
-      background-color: #0d255f;
+      background-color: #001d57;
       width: 100%;
       margin: 0 auto;
       padding: 15px;
@@ -782,6 +786,36 @@
       margin-bottom: 14px;
     }
 
+    .btn-third {
+      width: 100%;
+      max-width: 320px;
+      padding: 14px;
+      background: #fff202;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 30px;
+      margin-bottom: 14px;
+    }
+
+
+    .btn-fourth {
+      width: 100%;
+      max-width: 320px;
+      padding: 10px;
+      background: #e5e5e5;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 14px;
+    }
+
     .guest-login {
       min-height: 100%;
       padding: 40px 20px;
@@ -812,7 +846,6 @@
       border-radius: 10px;
       border: none;
       font-size: 16px;
-      margin-bottom: 30px;
     }
 
     .guest-info {
@@ -833,4 +866,103 @@
       object-fit: cover;
       display: block;
       margin: 0 auto;
+    }
+
+    .error-message {
+      font-size: 12px;
+      color: #ff4d4f;
+      margin-top: 2px;
+      display: none;
+    }
+
+    .error-message.visible {
+      display: block;
+    }
+
+    input.error {
+      border: 2px solid #ff4d4f;
+    }
+
+    .age-box{
+      width: 90%;
+      margin: 10px auto;
+    }
+
+    .payment-screen {
+      background: linear-gradient(#061a44, #020b26);
+      color: white;
+      min-height: 100vh;
+      padding: 16px;
+      font-family: system-ui, sans-serif;
+    }
+    
+        /* Section */
+    .section {
+      text-align: center;
+      padding: 24px 0;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    /* Accordion */
+    .accordion {
+      background: #081f4d;
+      border-radius: 8px;
+      margin-bottom: 14px;
+    }
+
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      font-weight: 600;
+    }
+
+    .accordion-content {
+      padding: 0 16px 16px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .accordion.disabled {
+      opacity: 0.4;
+    }
+
+    /* Button */
+    .primary-btn {
+      margin-top: 14px;
+      width: 100%;
+      padding: 14px;
+      background: #ffe600;
+      color: #000;
+      border: none;
+      font-weight: 700;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    /* Bottom Bar */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #f2f2f2;
+      color: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 18px;
+      font-weight: 600;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
     }
