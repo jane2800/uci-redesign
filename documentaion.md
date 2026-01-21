@@ -11,6 +11,8 @@ University of Europe For Applied Sciences
 
 20.01.2026
 
+Github repo:https://github.com/jane2800/uci-redesign/tree/main
+
 ## Device Chosen
 The device chosen for this project is the UCI German Mobile App. United Cinemas International(UCI) is a international film group, in this project I specifaclly am targetting the German version of the app. The app should allow the users to booking tickets for movies at the cinema, see upcoming events, purchase merchandise items and more. The focus of this project will be the home page, which is the first page you see upon opening the app and the pages that follow when booking the movie ticket. 
 
@@ -20,69 +22,69 @@ The following screenshots illustrates the the flaws with the application
 ### Problem 1: Cluttered Home Page
 Repeated legend and location at each new seaction. The overall strucutre is overwheling with information for the user, making it harder to scan the overall page quickly. Take more time to navigate, leading to frustration
 <figure>
-  <img src="images/uci-evidence/IMG_6278.PNG" alt="Flowchart before Redesign" width=50%>
+  <img src="images/uci-evidence/IMG_6278.PNG" alt="Flowchart before Redesign" width=25%>
 </figure>
 <figure>
-  <img src="images/uci-evidence/IMG_6279.PNG" alt="Flowchart before Redesign" width=50%>
+  <img src="images/uci-evidence/IMG_6279.PNG" alt="Flowchart before Redesign" width=25%>
 </figure>
 <figure>
-  <img src="images/uci-evidence/IMG_6280.PNG" alt="Flowchart before Redesign" width=50%>
+  <img src="images/uci-evidence/IMG_6280.PNG" alt="Flowchart before Redesign" width=25%>
 </figure>
 <figure>
-  <img src="images/uci-evidence/IMG_6281.PNG" alt="Flowchart before Redesign" width=50%>
+  <img src="images/uci-evidence/IMG_6281.PNG" alt="Flowchart before Redesign" width=25%>
 </figure>
 <figcaption>Figure 1-4: Home Page</figcaption>
 
 ### Problem 2: Lack of Back Button
 There is no visual back button resorting in the only ways the user is able to go back is by one of two ways: swipe right on their screen (Figure 5) or open the menu and go back to home (Figure 6)
 <figure>
-  <img src="images/uci-evidence/IMG_6294.PNG" alt="Flowchart before Redesign" width=50%>
+  <img src="images/uci-evidence/IMG_6294.PNG" alt="Flowchart before Redesign" width=25%>
 </figure>
 <figure>
-  <img src="images/uci-evidence/IMG_6293.PNG" alt="Flowchart before Redesign" width=50%>
+  <img src="images/uci-evidence/IMG_6293.PNG" alt="Flowchart before Redesign" width=25%>
 </figure>
 <figcaption>Figure 5-6: Back Navigation</figcaption>
 
 ### Problem 3: Drop down view to see more information about movie and times
 Instead of having a dedicated pages for this, it is all added to a drop down view, which does not automatically close unless user presses up arrow button
 <figure>
-  <img src="images/uci-evidence/IMG_6282.PNG" alt="Flowchart before Redesign" width=50%>
+  <img src="images/uci-evidence/IMG_6282.PNG" alt="Flowchart before Redesign" width=25%>
 </figure>
 <figure>
-  <img src="images/uci-evidence/IMG_6283.PNG" alt="Flowchart before Redesign" width=50%>
+  <img src="images/uci-evidence/IMG_6283.PNG" alt="Flowchart before Redesign" width=25%>
 </figure>
 <figure>
-  <img src="images/uci-evidence/IMG_6284.PNG" alt="Flowchart before Redesign" width=50%>
+  <img src="images/uci-evidence/IMG_6284.PNG" alt="Flowchart before Redesign" width=25%>
 </figure>
 <figure>
-  <img src="images/uci-evidence/IMG_6295.PNG" alt="Flowchart before Redesign" width=50%>
+  <img src="images/uci-evidence/IMG_6295.PNG" alt="Flowchart before Redesign" width=25%>
 </figure>
 <figcaption>Figure 7-11: Dropdown to see more information on movie</figcaption>
 
 ### Problem 4: Hierarchy of buttons on Guest Login Page
 Right after the user types in the email, their instinct is to press the closest button to them, however that is the Login Button, sending them back to inital page. Additionally, the user often needs to scroll down to see the proper button, making them completely miss it.
 <figure>
-  <img src="images/uci-evidence/IMG_6288.PNG" alt="Flowchart before Redesign" width=50%>
+  <img src="images/uci-evidence/IMG_6288.PNG" alt="Flowchart before Redesign" width=25%>
 </figure>
 <figcaption>Figure 12: Guest Login Page</figcaption>
 
 ### Problem 5: Seat Selection Visible even when not accesible 
 The Seat Selection is visible on two instances that it is not clear the other things need to be done before the user can access it. One is in the login page, and another is in the ticket selection.
 <figure>
-  <img src="images/uci-evidence/IMG_6288.PNG" alt="Flowchart before Redesign" width=50%>
+  <img src="images/uci-evidence/IMG_6288.PNG" alt="Flowchart before Redesign" width=25%>
 </figure>
 <figure>
-  <img src="images/uci-evidence/IMG_6289.PNG" alt="Flowchart before Redesign" width=50%>
+  <img src="images/uci-evidence/IMG_6289.PNG" alt="Flowchart before Redesign" width=25%>
 </figure>
 <figure>
-  <img src="images/uci-evidence/IMG_6290.PNG" alt="Flowchart before Redesign" width=50%>
+  <img src="images/uci-evidence/IMG_6290.PNG" alt="Flowchart before Redesign" width=25%>
 </figure>
 <figcaption>Figure 13: Seat Selection Element</figcaption>
 
 ### Problem 6: Seat Section has no legend with pricing
 It is unclear to the user that there is a price increase between the different seats.
 <figure>
-  <img src="images/uci-evidence/IMG_6292.PNG" alt="Flowchart before Redesign" width=50%>
+  <img src="images/uci-evidence/IMG_6292.PNG" alt="Flowchart before Redesign" width=25%>
 </figure>
 <figcaption>Figure 14: Seat Selection without a Legend</figcaption>
 
@@ -144,7 +146,7 @@ The UCI Mobile app specifically the Home Page and the Booking a Ticket pages, sh
 
 ### System Flow Diagram Before Redesign
 <figure>
-  <img src="images/Flowchart.png" alt="Flowchart before Redesign">
+  <img src="images/Flowchart.png" alt="Flowchart before Redesign" width=50%>
   <figcaption>Figure 15: Flowchart of system before redesign.</figcaption>
 </figure>
 
@@ -153,7 +155,7 @@ The proposed improvements focus on creating a clearer, more intuitive booking ex
 
 ### System Flow Diagram After Redesign
 <figure>
-  <img src="images/Flowchart-2.png" alt="Redesign Flowchart">
+  <img src="images/Flowchart-2.png" alt="Redesign Flowchart" width=25%>
   <figcaption>Figure 16: Flowchart of Redesign.</figcaption>
 </figure>
 
