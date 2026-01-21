@@ -90,7 +90,7 @@ function handleLogin() {
   emailInput.classList.remove("error");
 
   // Continue flow
-  navigateTo("ticket-selection-screen");
+  navigateTo("payment-screen");
 }
 
 
