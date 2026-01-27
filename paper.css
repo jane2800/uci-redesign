@@ -1,0 +1,36 @@
+@page {
+  size: A4;
+  margin: 1in;
+}
+
+body {
+  font-family: "Times New Roman", serif;
+  font-size: 12pt;
+  line-height: 1.6;
+}
+
+/* Title page */
+.title-page {
+  text-align: center;
+  margin-top: 30%;
+}
+
+/* Headings */
+h1 {
+  font-size: 18pt;
+  text-align: center;
+  break-after: page;
+}
+
+h2 {
+  font-size: 14pt;
+  margin-top: 2em;
+}
+
+/* Lists */
+ol, ul {
+  margin-left: 2em;
+}
+
+
+
